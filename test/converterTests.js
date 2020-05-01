@@ -5,6 +5,7 @@ const cxVizConverter = require ('../src/converter.js');
 const fs = require('fs-extra');
 
 describe('converter tests', function(){
+  
   it('example_1 lnv', function(){
     var content = fs.readFileSync('test/resources/example_1.cx');
     var rawCX = JSON.parse(content);
@@ -19,6 +20,7 @@ describe('converter tests', function(){
     expect(() => cxVizConverter.convert(rawCX, 'lnv')).to.throw(); 
   });
 
+  /*
   it('example_1 cytoscapeJS', function(){
     var content = fs.readFileSync('test/resources/example_1.cx');
     var rawCX = JSON.parse(content);
@@ -27,6 +29,6 @@ describe('converter tests', function(){
 
     console.log(JSON.stringify(newData));
   });
-
+*/
   
 });
